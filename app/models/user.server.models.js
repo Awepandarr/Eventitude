@@ -99,7 +99,6 @@ const removeToken = (token, done) => {
 */
 const getIdFromToken = (token, done) => {
     if (!token) return done(true, null);
-
     const sql = 'SELECT user_id FROM users WHERE session_token=?';
     db.get(sql, [token], (err, row) => {
         if (row) {

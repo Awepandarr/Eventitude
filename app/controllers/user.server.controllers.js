@@ -81,6 +81,7 @@ const login = (req, res) => {
                         return res.sendStatus(500);
                     }
                     return res.status(200).send({ user_id: id, session_token: newToken });
+                    
                 });
             }
         });
